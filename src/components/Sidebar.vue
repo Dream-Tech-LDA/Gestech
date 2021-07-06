@@ -15,92 +15,95 @@
         <ul class="list-siedebar">
 
             
-                <router-link  to="/" class="dropdown-btn">
-                    <view-dashboard></view-dashboard> <span>Painel</span>
-                </router-link>
-                <router-link to="/" class="sub-list">
-                    <i class="icofont-ui-user-group"></i> <span>Utilizadores</span>
-                </router-link>
-        
-
+            <router-link  to="/" class="dropdown-btn">
+                <view-dashboard></view-dashboard> <span>Painel</span>
+            </router-link>
             
-                <router-link to="/" class="dropdown-btn">
-                    <i class="icofont-prestashop"></i> <span>Produtos</span>
-                </router-link>
-
-                <router-link to="/" class="sub-list">
+            <div class="sub-list">
+                 <router-link to="/">
                     <i class="icofont-ui-user-group"></i> <span>Utilizadores</span>
                 </router-link>
-        
-    
                 <router-link to="/">
                     <i class="icofont-ui-user-group"></i> <span>Utilizadores</span>
                 </router-link>
-        
+            </div>
+           
+    
 
-    
-                <router-link to="/">
-                    <i class="icofont-computer"></i> <span>POS</span>
-                </router-link>
         
+            <router-link to="/" class="dropdown-btn">
+                <i class="icofont-prestashop"></i> <span>Produtos</span>
+            </router-link>
+    
 
+            <router-link to="/">
+                <i class="icofont-ui-user-group"></i> <span>Utilizadores</span>
+            </router-link>
     
-                <router-link to="/">
-                    <i class="icofont-folder"></i> <span>Documentos</span>
-                </router-link>
-        
 
-    
-                <router-link to="/">
-                    <i class="icofont-user-male"></i> <span>Clientes</span>
-                </router-link>
-        
 
+            <router-link to="/">
+                <i class="icofont-computer"></i> <span>POS</span>
+            </router-link>
     
-                <router-link to="/">
-                    <i class="icofont-basket"></i> <span>Encomendas</span>
-                </router-link>
-        
 
-    
-                <router-link to="/">
-                    <i class="icofont-database"></i> <span>Dados</span>
-                </router-link>
-        
 
+            <router-link to="/">
+                <i class="icofont-folder"></i> <span>Documentos</span>
+            </router-link>
     
-                <router-link to="/">
-                    <i class="icofont-list"></i> <span>Realatórios</span>
-                </router-link>
-        
 
-    
-                <router-link to="/">
-                    <i class="icofont-file-fill"></i> <span>SAFT</span>
-                </router-link>
-        
 
+            <router-link to="/">
+                <i class="icofont-user-male"></i> <span>Clientes</span>
+            </router-link>
     
-                <router-link to="/">
-                    <i class="icofont-money"></i> <span>Contablidade</span>
-                </router-link>
-        
 
-    
-                <router-link to="/">
-                    <i class="icofont-ui-settings"></i> <span>Definições</span>
-                </router-link>
-        
 
+            <router-link to="/">
+                <i class="icofont-basket"></i> <span>Encomendas</span>
+            </router-link>
     
-                <router-link to="/">
-                    <i class="icofont-ui-v-card"></i> <span>Sobre</span>
-                </router-link>
-        
+
+
+            <router-link to="/">
+                <i class="icofont-database"></i> <span>Dados</span>
+            </router-link>
     
-                <router-link to="/">
-                    <i class="icofont-ui-close"></i> <span>Sair</span>
-                </router-link>
+
+
+            <router-link to="/">
+                <i class="icofont-list"></i> <span>Realatórios</span>
+            </router-link>
+    
+
+
+            <router-link to="/">
+                <i class="icofont-file-fill"></i> <span>SAFT</span>
+            </router-link>
+    
+
+
+            <router-link to="/">
+                <i class="icofont-money"></i> <span>Contablidade</span>
+            </router-link>
+    
+
+
+            <router-link to="/">
+                <i class="icofont-ui-settings"></i> <span>Definições</span>
+            </router-link>
+    
+
+
+            <router-link to="/">
+                <i class="icofont-ui-v-card"></i> <span>Sobre</span>
+            </router-link>
+    
+
+            <router-link to="/">
+                <i class="icofont-ui-close"></i> <span>Sair</span>
+            </router-link>
         
             
            
@@ -119,7 +122,7 @@
 import "../assets/css/sidebar.css"
 
  import { ViewDashboard} from 'mdue';
- //import {refs} from "vue"
+
 export default {
 
     components: {
@@ -127,27 +130,23 @@ export default {
     },
 
     mounted(){
-         let dropdown = document.getElementsByClassName("dropdown-btn");
+        let dropdown = document.getElementsByClassName("dropdown-btn");
       
-     
 
             for (let i = 0; i < dropdown.length; i++) {
             
                 dropdown[i].addEventListener("click", function() {
-                  
-                    //this.classList.toggle("active");
+
 
                     let dropdownContent = this.nextElementSibling;
 
-                    console.log(dropdownContent.classList[2])
+                    console.log(dropdownContent.className)
 
-                    if (dropdownContent.classList[2] == "sub-list") {
-
-                    
+                    if (dropdownContent.className == "sub-list") {
                         dropdownContent.classList.remove('sub-list')
                         dropdownContent.classList.add('sub-list-active')
 
-                    } else if(dropdownContent.classList[2] == "sub-list-active") {
+                    } else if(dropdownContent.className == "sub-list-active") {
 
                         dropdownContent.classList.remove('sub-list-active')
                         dropdownContent.classList.add('sub-list')
