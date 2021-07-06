@@ -1,0 +1,32 @@
+:root{
+
+    --bgSidebar: #1B1F2B
+
+}
+
+.sidebar{
+    background-color: var(--bgSidebar);
+    width: 130px;
+    height: 100vh;
+    padding: 40px;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+}
+.sidebar .info-user{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.sidebar .info-user .user-logo img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.sidebar a{
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-top: 3px;
+}
