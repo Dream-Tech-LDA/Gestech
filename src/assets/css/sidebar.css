@@ -34,14 +34,24 @@
 .list-siedebar{
     margin-top: 22px;
 }
-.list-siedebar li{
+.list-siedebar a{
     margin-top: 22px;
 }
 .list-siedebar a{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+}
+.list-siedebar  span{
+    margin-left: 12px;
+}
+.sub-list{
+    display: none !important;
+    transition: ease 0.7s;
   
 }
-.list-siedebar li span{
-    margin-left: 12px;
+.sub-list-active{
+    display: block !important;
+    transition: ease 0.7s;
+
 }
