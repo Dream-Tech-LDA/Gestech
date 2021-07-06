@@ -48,10 +48,12 @@
 .sub-list{
     display: none !important;
     transition: ease 0.7s;
-  
 }
 .sub-list-active{
     display: block !important;
     transition: ease 0.7s;
-
+}
+.sub-list-active a{
+    margin-left: 22px;
+    border-bottom: 1px solid ;
 }
