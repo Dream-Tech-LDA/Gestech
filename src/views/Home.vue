@@ -2,7 +2,6 @@
 
     <Sidebar></Sidebar>
 
-
 </template>
 
 

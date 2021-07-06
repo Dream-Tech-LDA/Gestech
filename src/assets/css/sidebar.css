@@ -29,4 +29,19 @@
     color: #FFFFFF;
     font-weight: bold;
     margin-top: 3px;
+    font-size: 14px;
+}
+.list-siedebar{
+    margin-top: 22px;
+}
+.list-siedebar li{
+    margin-top: 22px;
+}
+.list-siedebar a{
+    display: flex;
+    flex-direction: row;
+  
+}
+.list-siedebar li span{
+    margin-left: 12px;
 }
